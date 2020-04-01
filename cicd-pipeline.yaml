@@ -174,7 +174,7 @@ Resources:
                 - echo Deploying client to S3
                 - cd ./build && aws s3 cp . s3://$S3_CLIENT_BUCKET --recursive > deploymentResult.txt
           artifacts:
-            files: deploymentResult.txt
+            files: build/deploymentResult.txt
       Environment:
         ComputeType: "BUILD_GENERAL1_SMALL"
         Image: "aws/codebuild/nodejs:6.3.1"
